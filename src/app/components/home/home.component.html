@@ -1,0 +1,17 @@
+<div class="container" [style.display]="moviesDetailVisible == 'none' ? 'block' : 'none'">
+    <div class="row">
+        <div class="page-{{i+1}}" *ngFor="let moviesPage of moviesData; let i = index">
+            <div class="col-sm-4" *ngFor="let item of moviesPage; let c = index">
+                <a (click)="moviesDetail(item.imdbID)">
+                    <app-card [movies]="item"></app-card>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top:10px;" [style.display]="moviesDetailVisible">
+    <div class="row" *ngIf="moviesDetailData != null">
+        <app-card-detail [moviesDetail]="moviesDetailData" (moviesDetailEvent)="moviesDetailEvent($event)"></app-card-detail>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="col-sm-12">
+    <div class="detail-card-back">
+        <a (click)="back()"><img src="assets/movies/detail/back-icon.png" /></a>
+    </div>    
+    <div class="detail-card-title">
+        <h2>{{moviesDetailData.Title}}</h2>
+    </div>
+    <div class="detail-card-imdb">IMDB <span class="detail-card-imdb-data">{{moviesDetailData.imdbRating}}</span></div>
+</div>
+<div class="col-sm-3">
+    <div class="poster">    
+        <img [src]="moviesDetailData.Poster == 'N/A' ? 'assets/movies/card/imf.png' : moviesDetailData.Poster" />
+    </div>
+</div>
+<div class="col-sm-9">
+    <div class="row">
+        <div class="detail-card-plot">   
+            {{moviesDetailData.Plot}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="detail-card-info">
+            <div class="detail-card-info-item">
+                <div class="director">Yönetmen</div>
+                <div class="separator">:</div>
+                <div class="info-data"> {{moviesDetailData.Director}}</div>
+            </div>            
+        </div>
+        <div class="detail-card-info">
+            <div class="detail-card-info-item">
+                <div class="director">Yapım</div>
+                <div class="separator">:</div>
+                <div class="info-data"> {{moviesDetailData.Year}}</div>
+            </div>            
+        </div>
+        <div class="detail-card-info">
+            <div class="detail-card-info-item">
+                <div class="director">Oyuncular</div>
+                <div class="separator">:</div>
+                <div class="info-data"> {{moviesDetailData.Actors}}</div>
+            </div>            
+        </div>
+        <div class="detail-card-info">
+            <div class="detail-card-info-item">
+                <div class="director">Tür</div>
+                <div class="separator">:</div>
+                <div class="info-data"> {{moviesDetailData.Genre}}</div>
+            </div>            
+        </div>
+        <div class="detail-card-info">
+            <div class="detail-card-info-item">
+                <div class="director">Süre</div>
+                <div class="separator">:</div>
+                <div class="info-data"> {{moviesDetailData.Runtime}}</div>
+            </div>            
+        </div>
+        <div class="detail-card-info">
+            <div class="detail-card-info-item">
+                <div class="director">Dil</div>
+                <div class="separator">:</div>
+                <div class="info-data"> {{moviesDetailData.Language}}</div>
+            </div>            
+        </div>
+    </div>  
+</div>

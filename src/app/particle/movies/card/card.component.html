@@ -1,0 +1,11 @@
+<div class="card">    
+    <img [src]="moviesData.Poster == 'N/A' ? 'assets/movies/card/imf.png' : moviesData.Poster" class="card-img" />
+
+    <div class="card-title">
+        <span>{{moviesData.Title}}</span>
+    </div>
+
+    <div class="card-year">
+        {{moviesData.Year}}
+    </div>
+</div>
